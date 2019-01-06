@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>详情页</title>
+	<style type="text/css">
+		*{margin:0; padding:0;}
+		li{list-style: none;}
+		a{text-decoration:none;}
+/*cover*/
+		#cover{width:100%; height:122px; padding-top:7px;background-color: white;}
+		#coverone{width:1180px; height:19px;margin: 0 auto; }
+		#covertwo{width:1180px; height:79px; margin: 0 auto;}
+		#coverthree{width:1180px; height:24px; margin: 0 auto;}
+		
+		/*coverone*/
+		#incoverone{width:1180px;height:19px;margin: 0 auto;}
+		#incoverone *{float:left;font-size:12px;text-decoration:none;}
+		.topa{width:80px;height:19px; text-align:center;margin-right:380px;color:gray;}
+		.top_QQ{width:19px;height:19px;background:url(任务所需小图/img/common_min.png) 0 -31px;margin-right: 18px; }
+		.top_WX{width:19px;height:19px;background:url(任务所需小图/img/common_min.png) 0 -53px;margin-right: 18px; }
+		.top_XL{width:19px;height:19px;background:url(任务所需小图/img/common_min.png) 0 -75px;margin-right: 18px; }
+		.top_XX{width:24px;height:19px;padding-left:18px;margin-right:18px;background:url(任务所需小图/img/common_min.png) -4px -113px no-repeat;color:gray; }
+		.topb{width:24px;height:19px;margin-right:18px;color:gray;}
+		.top_DD{background:url(任务所需小图/img/dingdan.jpg) 0 2px no-repeat;padding-left: 17px;margin-right:18px;color:gray;}
+		.topc{width:48px;height:19px;margin-right: 18px;color:gray;}
+		.top_SJ{background: url(任务所需小图/img/tp-my-phone.png) 0 2px no-repeat;padding-left:9px; margin-right:18px;color:gray;}
+		.topd{width:32px;height:19px;margin-right: 18px;color:gray;}
+		.top_GW{background: url(任务所需小图/img/gouwuche.jpg) 0 2px no-repeat;padding-left:23px;color:gray;}
+		.tope{width:8px;height:19px;color:#fe6c00;font-weight: bolder;margin:0 2px;}
+		
+		/*covertwo*/
+		#incovertwo{width: 1180px;height:79px;margin:0 auto;}
+		#incovertwo *{float:left;}
+		.tele{width:84px;height:38px;border:1px solid gray;border-radius: 3px;font-size:12px;color: gray;margin: 31px 0 8px 0;}
+		.logo_03{width:141px;height:62px;background:url(任务所需小图/img/logo_03.jpg) no-repeat;margin:17px 108px 0 0;}
+		.search{width:497px;height:34px;margin:31px 0 8px 0;color:gray;border:3px solid #fe6c00;border-top-left-radius:3px;border-bottom-left-radius: 3px;}
+		.scbut{width:80px;height:40px;margin:31px 90px 8px 0;background-color: #fe6c00;border: 1px solid #fe6c00;border-top-right-radius:3px;border-bottom-right-radius: 3px;color:white;}
+		.telea{width:22px;height:13px;background:url(任务所需小图/img/common_min.png) 0 -98px no-repeat; margin: 5px 31px;}
+		.teleb{width:22px;height:13px;background:url(任务所需小图/img/common_min.png) 0 -115px no-repeat; margin: 5px 31px;}
+		.telec{width:54px;height:16px;background:url(任务所需小图/img/common_min.png) 0 -131px no-repeat;padding-left: 20px;margin:11px 6px; }
+		.teleq{width:84px;height:38px;border:1px solid gray;border-radius: 3px;font-size:12px;color: gray;background-color: #fe6c00;margin: 31px 0 8px 0;}
+		.twofont{margin: 0 1px;}
+
+		/*coverthree*/
+		#incoverthree{width: 1180px;height:24px;margin:0 auto;}
+		#incoverthree *{float: left;text-decoration:none;}
+		.ictul{margin:4px 361px 4px 256px;font-size:12px;color:#ebe7e7;list-style: none;}
+		.upright{margin:0 7px;}
+		.reda{color: red;}
+		.purplea{color: #aca9d3;}
+		.ictula{color: black}
+/*middle*/
+		#middle{width:100%;height:817px;background-color: #f2d65c;}
+		#heitiao{width:100%;height:40px;background-color:black;margin:0;}
+		#heixiahe{width:100%;height:777px;background-color:#f6f5f4;}
+
+		/*heitiao*/
+		#shouyege{background-color:#fe0d4a;}
+		.heitiaohe{width:1180px;height:40px;margin:0 auto;}
+		.heitiaohe a{float:left;color:white;font-size:14px;width:127px;height:40px;line-height:40px;text-align:center;}
+
+		/*heixiahe*/
+		#heixiap{width:1180px;height:38px;text-align:left;margin:0 auto;float:none;line-height: 38px;}
+
+		/*zhuti*/
+		#zhuti{width:1180px;height:631px;margin:auto;}
+		#zuohe{float:left;width:994px;height:631px;background-color: white;}
+		#youhe{float:left;width:180px;height:631px;background-color:white;margin-left: 6px;}
+
+		/*zuohe*/
+		#zhongtu{float:left;width:410px;height:410px;margin:20px 0 0 20px;border:1px solid #d0cdc7;box-sizing:border-box;}
+
+		#slider{width:205px;height:205px;position:absolute;left:0;top:0;background:#CCC;opacity:0.4;cursor: move;display:none; filter:alpha(opacity=40);}
+		#datu{position:absolute;display:none; width:615px;height:615px;overflow:hidden;left: 500px;top:500px;}
+		#xiaotuhe{float:left;width:410px;height:181px;margin-left: 20px;padding-top:20px;}
+		#spanr{margin-left: 228px;}
+		#sp0{}
+
+		/*wenzi*/
+		#wenzi{float:left;width:544px;height:611px;margin:20px 0 0 20px;}
+		#wenzi p{float:left;text-align:left;height:30px;margin-top: 10px;width:544px;}
+		#wenzi span{float:left;}
+		
+		#biaoti{font-size:16px;color:black;}
+		#zhushi{width:466px;height:40px;}
+		#zhehou{font-size:16px;color:#ff0754;}
+		#zheqian{text-decoration:line-through;}
+		.hanliangtou{width:120px;height:30px;text-align:center;line-height: 30px;}
+		.hanliang150{width:64px;height:30px;text-align:center;line-height: 30px;box-sizing:border-box;}
+		.hanliang200{width:64px;height:30px;text-align:center;line-height: 30px;box-sizing:border-box;}
+		#jian{width: 30px;height:30px;text-align:center;line-height: 30px;border:1px solid gray;margin-left:15px;box-sizing: border-box;}
+		#shu{width:50px;height:29px;text-align: center;line-height: 30px;border:1px solid gray;box-sizing: border-box;}
+		#jia{width:30px;height:30px;text-align: center;line-height:30px;border:1px solid gray;margin-right:15px;box-sizing: border-box;}
+		#yixuan{font-size:16px;color:#ff9003;}
+		#xiaoliang{margin-right: 142px;}
+		.daanniu1{width: 150px;height:40px;margin-left: 20px;color:#ff0754;border:1px solid #ff0754;box-sizing: border-box;border-radius: 3px;background-color: white;}
+		.daanniu2{width: 150px;height:40px;color: white;border:1px solid #ff0754;border-radius: 3px;background-color: #ff0754;margin-left: 15px;}
+		.black{color:black;}
+
+		/*tuhe*/
+		#tuhe{float:left;width:430px;height:631px;}
+
+
+
+		/*zhuxiatu*/
+		#zhuxiatu{width:1180px;height:108px;margin: auto;}
+
+/*bottom*/
+		#bottom{width:100%;height:345px;background-color: #f8f7f6;}
+		#botton *{float: left;}
+		#bottomup{width: 1180px;height: 181px;border-bottom:1px solid gray;margin: 0 auto;}
+		#bottomdown{width: 1180px;height:163px;margin: 0 auto;}
+		/*bottomup*/
+		#bottomuplist{width: 843px;height: 181px;float: left;}
+		#bottomuplist ul{font-size:12px;color:gray;line-height: 24px;}
+
+		.loginB{margin-right: 21px;float: left;}
+		.bigfont{font-size:16px;color:black;}
+
+		.box1{width: 131px;height:150px;margin-left: 64px;padding-top: 31px;float: left;}
+		.box2{width:131px;height: 150px;padding-top: 31px;float: left;}
+		.box3{width: 131px;height: 150px;padding-top: 31px;float: left;}
+		.box4{width: 134px;height:150px;padding-top: 31px;float: left;}
+		.box5{width: 127px;height:150px;padding-top: 31px;float: left;}
+		.box6{width:123px;height:150px;padding-top: 31px;float: left;}
+
+		.erweima{width:117px;height:144px;padding:27px 50px 10px 0;}
+		/*bottondown*/
+		.btdul{width:554px;height:16px;padding: 16px 313px 0 313px;padding-top:16px;}
+		.btdul *{font-size:12px;color:gray;list-style: none;text-decoration: none;float:left;}
+		p{width:1180px;height:24px;font-size:12px;color:gray;float:left;text-align:center;float:left;}
+		.imgdiv{width:1180px;height:58px;float:left;text-align:center;}
+	</style>
+</head>
+<body>
+	<div id='cover'>
+		<div id='coverone'>
+			<div id='incoverone'>
+				<a href='#' class='topa'>帮5买，享帮帮</a>
+				<a class='top_QQ'></a>
+				<a class='top_WX'></a>
+				<a class='top_XL'></a>
+				<a href="#" class='topb'>登陆</a>
+				<a href="#" class='topb'>注册</a>
+				<a href="#" class='top_XX'>消息</a>
+				<a href="#" class='top_DD'>我的订单</a>
+				<a href="#" class='topc'>我的收藏</a>
+				<a href="#" class='topc'>帮钻兑换</a>
+				<a href="#" class='top_SJ'>手机版</a>
+				<a href="#" class='topd'>帮5淘</a>
+				<a href="#" class='topc'>客户服务</a>
+				<a href="#" class='top_GW'>购物车</a>
+				<a href="#" class='tope'>0</a>
+			</div>
+		</div>
+		<div id='covertwo'>
+			<div id='incovertwo'>
+				<a href="#" class='logo_03'></a>
+				<input class='search' type="text" name="search" value="输入商品网址或关键词，直通全网，快速帮5购！">
+				<button class='scbut'>搜全网</button>
+				<div class='tele'>
+					<a class='telea'></a>
+					<a class='twofont'>400-085-0505</a>
+				</div>
+				<div class='tele'>
+					<a class='teleb'></a>
+					<a class='twofont'>mc@b5m.com</a>
+				</div>
+				<div class='teleq'>
+					<a class='telec'>常见问题</a>
+				</div>
+			</div>
+		</div>
+		<div id='coverthree'>
+			<div id="incoverthree">
+				<ul class="ictul">
+					<li><a class="reda" href="#">洗发护发</a></li><li class="upright">|</li>
+					<li><a class="reda" href="#">日本纸尿裤</a></li><li class="upright">|</li>
+					<li><a class="ictula" href="#">身体乳</a></li><li class="upright">|</li>
+					<li><a class="ictula" href="#">内衣文胸</a></li><li class="upright">|</li>
+					<li><a class="purplea" href="#">iPhone 6s</a></li><li class="upright">|</li>
+					<li><a class="purplea" href="#">iPad Air2</a></li><li class="upright">|</li>
+					<li><a class="ictula" href="#">牛仔裤</a></li><li class="upright">|</li>
+					<li><a class="ictula" href="#">奶粉</a></li><li class="upright">|</li>
+					<li><a class="ictula" href="#">防晒霜</a></li><li class="upright">|</li>
+					<li><a class="ictula" href="#">伞</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id='middle'>
+		<div id="heitiao">
+			<div class="heitiaohe">
+				<a id="shouyege" href="#">首页</a>
+				<a href="#">热门品牌</a>
+				<a href="#">美妆个户</a>
+				<a href="#">服饰鞋包</a>
+				<a href="#">母婴生活</a>
+				<a href="#">食品保健</a>
+				<a href="#">韩国直邮</a>
+				<a href="#">跨境购</a>
+				<img src="任务所需小图/img/ff_03.jpg">
+			</div>
+		</div>
+		<div id="heixiahe">
+			<p id="heixiap">首页> 美容护肤/美体/精油> 防晒> 韩国 RE:CIPE 水晶清爽防水防晒喷雾SPF50 150ml/瓶</p>
+			<div id="zhuti">
+				<div id="zuohe">
+					<div id="tuhe">
+						<div id="zhongtu">
+							<img src="" id="Simg">
+							<div id="slider"></div>
+						</div>
+						<div id="datu">
+							<img src="任务所需小图/img/pp0.jpeg" id="Bimg">
+						</div>
+						<div id="xiaotuhe">
+							<img src="任务所需小图/img/spanl.jpg">
+							<img id="sp0" src="任务所需小图/img/sp0.jpeg">
+							<img id="sp1" src="任务所需小图/img/sp1.jpeg">
+							<img id="spanr" src="任务所需小图/img/spanr.jpg">
+						</div>
+					</div>
+					
+					<div id="wenzi">
+						<p id="biaoti">韩国RE:CIPE 水晶清爽防水防晒喷雾SPF50 150ml/瓶</p>
+						<p id="zhushi">【限购3件】 超透明无痕防晒，防水防汗定妆，保湿降温不黏腻。水晶防晒喷雾，喷后皮肤水润，不油，不留白，更不会像防晒霜那样抹不开，非常实用，开始存货吧。</p>
+						<p><span class="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价格</span><span id="zhehou">&nbsp;&nbsp;&nbsp;¥71&nbsp;&nbsp;&nbsp;</span><span class="black" id="zheqian">¥150</span></p>
+						<img src="任务所需小图/img/ss_09.jpg">
+						
+						<p><span class="hanliangtou black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;化妆品净含量</span><span class="hanliang150 black" id="ml150">150ml</span><span class="hanliang200 black" id="ml200">200ml</span></p>
+						<p>
+							<span class="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数量</span>
+							<button id="jian">-</button>
+							
+							<input id="shu" type="input" name="shuliang" value="1">
+
+							<button id="jia">+</button>
+							
+							<a class="black">件（库存5件）</a>
+						</p>
+						<img id="xiaoliang" src="任务所需小图/img/oo_03.jpg">
+						<p><span class="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您已选择</span><span id="yixuan">"150ml"</span></p>
+						<button class="daanniu1">立即购买</button>
+						<button class="daanniu2">加入购物车</button>
+					</div>
+
+				</div>
+				<div id="youhe"><img src="任务所需小图/img/ww_07.jpg"></div>
+			</div>
+			<div id="zhuxiatu"><img src="任务所需小图/img/a_07.jpg"></div>
+		</div>
+	</div>
+	<div id='bottom'>
+		<div id="bottomup">
+			<img class="loginB" src="任务所需小图/img/loginB.jpg">
+			<div id="bottomuplist">
+				<div class="box1">
+					<ul><li class="bigfont">购物指南</li><li>如何下单</li><li>帮5购流程</li><li>订单查询</li><li>物流配送</li></ul>
+				</div>
+				<div class="box2">
+					<ul><li class="bigfont">支付相关</li><li>支付方式</li><li>安全设置</li><li>账户信息</li></ul>
+				</div>
+				<div class="box3">
+					<ul><li class="bigfont">售后服务</li><li>取消订单</li><li>申请售后</li><li>退货流程</li><li>退款相关</li></ul>
+				</div>
+				<div class="box4">
+					<ul><li class="bigfont">VIP服务</li><li>VIP优惠</li><li>如何成为VIP</li><li>超级帮钻</li></ul>
+				</div>
+				<div class="box5">
+					<ul><li class="bigfont">帮韩品</li><li>韩国正品</li><li>闪电发货</li><li>帮韩品售后</li></ul>
+				</div>
+				<div class="box6">
+					<ul><li class="bigfont">更多</li><li>手机APP</li><li>帮5采APP</li><li>帮5淘APP</li><li>其他</li></ul>
+				</div>
+			</div>
+			<img class="erweima" src="任务所需小图/img/erweima.jpg">
+		</div>
+		<div id="bottomdown">
+			<ul class="btdul">
+				<li><a href="#">关于帮5买</a></li><li class="upright">|</li>
+				<li><a href="#">联系我们</a></li><li class="upright">|</li>
+				<li><a href="#">合作商家</a></li><li class="upright">|</li>
+				<li><a href="#">友情链接</a></li><li class="upright">|</li>
+				<li><a href="#">加入我们</a></li><li class="upright">|</li>
+				<li><a href="#">移动应用</a></li><li class="upright">|</li>
+				<li><a href="#">热门</a></li><li class="upright">|</li>
+				<li><a href="#">广告联盟</a></li><li class="upright">|</li>
+				<li><a href="#">使用条款</a></li>
+			</ul>
+
+			<p>Copyright © 2011-2015 B5M.COM. All rights reserved. Powered by B5Msoft Co.,Ltd.</p>
+			<p>增值电信业务经营许可证：沪B2-20130065号 | 中华人民共和国互联网药品信息服务资格证书（沪） -非经营性——2013-0034 沪卫（中医）网审【2015】 10032号 沪ICP备11034776号-3 | 食品流通许可证：</p>
+			<p>SP3101151410301755</p>
+			<div class="imgdiv">
+				<img src="任务所需小图/img/bo1.gif">
+				<img src="任务所需小图/img/bo2.png">
+				<img src="任务所需小图/img/bo3.gif">
+				<img src="任务所需小图/img/bo4.png">
+				<img src="任务所需小图/img/bo5.png">
+				<img src="任务所需小图/img/bo6.png">
+				<img src="任务所需小图/img/bo7.png">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		// 顶部悬浮
+		window.onload = function(){
+			
+			var cover = document.getElementById('cover');
+			window.onscroll = function(){
+				var st = document.documentElement.scrollTop || document.body.scrollTop;
+				if(st>129){
+					cover.style.position = 'fixed';
+				}else{
+					cover.style.position = 'static';
+				}
+			}
+		}
+
+		//放大镜切换图片
+		var zhongtu = document.getElementById('zhongtu');
+		var Simg = document.getElementById('Simg');
+		var slider = document.getElementById('slider');
+
+		var datu = document.getElementById('datu');
+		var Bimg = document.getElementById('Bimg');
+
+		window.onload = function(){
+			sp0.style.border = "2px solid #ff9003";
+			
+			Simg.src = '任务所需小图/img/pp0.jpeg';
+
+			// zhongtu.insertBefore(zhongtubentu,slider);
+			ml150.style.border = "1px solid #ff0754";
+			ml150.style.background = "url(任务所需小图/img/duigou.png) no-repeat 50px 16px";
+			
+		}
+		var sp0 = document.getElementById('sp0');
+		sp0.onmouseover = function(){
+			sp0.style.border = "2px solid #ff9003";
+			sp1.style.border = "";
+
+			Simg.src = '任务所需小图/img/pp0.jpeg';
+
+			Bimg.src = '任务所需小图/img/pp0.jpeg'
+			
+		}
+
+		var sp1 = document.getElementById('sp1');
+		sp1.onmouseover = function(){
+			sp0.style.border = "";
+			sp1.style.border = "2px solid #ff9003";
+			
+			Simg.src = '任务所需小图/img/pp1.jpeg';
+
+			Bimg.src = '任务所需小图/img/pp1.jpeg';
+			
+		}
+
+		//显示放大镜
+
+		zhongtu.onmouseover = function(){
+			slider.style.display = 'block';
+			datu.style.display = 'block';
+		}
+
+		zhongtu.onmouseout = function(){
+			slider.style.display = 'none';
+			datu.style.display = 'none';
+		}
+
+		zhongtu.onmousemove = function(ev){
+			var oL = ev.clientX - Simg.offsetLeft - slider.offsetWidth/2;
+			var oT = ev.clientY - Simg.offsetTop - slider.offsetHeight/2;
+
+			var oMaxw = zhongtu.offsetWidth - slider.offsetWidth;
+			var oMaxh = zhongtu.offsetHeight - slider.offsetHeight;
+
+			oL = oL>oMaxw?oMaxw:oL<0?0:oL;
+			oT = oT>oMaxh?oMaxh:oT<0?0:oT;
+
+			slider.style.left = oL + 'px';
+			slider.style.top = oT + 'px';
+
+			Bimg.style.left = -(oL*8)/3 + 'px';
+			Bimg.style.top = -(oT*8)/3 + 'px';
+		}
+
+
+		var ml150 = document.getElementById('ml150');
+		var ml200 = document.getElementById('ml200');
+		ml150.onclick = function(){
+			ml150.style.border = "1px solid #ff0754";
+			ml150.style.background = "url(任务所需小图/img/duigou.png) no-repeat 50px 16px";
+
+			ml200.style.border = "";
+			ml200.style.background = "";
+		}
+		ml200.onclick = function(){
+			ml200.style.border = "1px solid #ff0754";
+			ml200.style.background = "url(任务所需小图/img/duigou.png) no-repeat 50px 16px";
+
+			ml150.style.border = "";
+			ml150.style.background = "";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>首页</title>
+	<style type="text/css">
+		*{margin:0; padding:0;}
+		li{list-style: none;}
+/*cover*/
+		#cover{width:100%; height:122px; padding-top:7px;background-color: white;margin:0 auto;position: static;top:0px;left:0px;z-index: 1;}
+		#coverone{width:1180px; height:19px;margin:0 auto; }
+		#covertwo{width:1180px; height:79px;margin:0 auto;}
+		#coverthree{width:1180px; height:24px;margin:0 auto;}
+		
+		/*coverone*/
+		#incoverone{width:1180px;height:19px;margin: 0 auto;}
+		#incoverone *{float:left;font-size:12px;text-decoration:none;}
+		.topa{width:80px;height:19px; text-align:center;margin-right:380px;color:gray;}
+		.top_QQ{width:19px;height:19px;background:url(任务所需小图/img/common_min.png) 0 -31px;margin-right: 18px; }
+		.top_WX{width:19px;height:19px;background:url(任务所需小图/img/common_min.png) 0 -53px;margin-right: 18px; }
+		.top_XL{width:19px;height:19px;background:url(任务所需小图/img/common_min.png) 0 -75px;margin-right: 18px; }
+		.top_XX{width:24px;height:19px;padding-left:18px;margin-right:18px;background:url(任务所需小图/img/common_min.png) -4px -113px no-repeat;color:gray; }
+		.topb{width:24px;height:19px;margin-right:18px;color:gray;}
+		.top_DD{background:url(任务所需小图/img/dingdan.jpg) 0 2px no-repeat;padding-left: 17px;margin-right:18px;color:gray;}
+		.topc{width:48px;height:19px;margin-right: 18px;color:gray;}
+		.top_SJ{background: url(任务所需小图/img/tp-my-phone.png) 0 2px no-repeat;padding-left:9px; margin-right:18px;color:gray;}
+		.topd{width:32px;height:19px;margin-right: 18px;color:gray;}
+		.top_GW{background: url(任务所需小图/img/gouwuche.jpg) 0 2px no-repeat;padding-left:23px;color:gray;}
+		.tope{width:8px;height:19px;color:#fe6c00;font-weight: bolder;margin:0 2px;}
+		
+		/*covertwo*/
+		#incovertwo{width: 1180px;height:79px;margin:0 auto;}
+		#incovertwo *{float:left;}
+		.tele{width:84px;height:38px;border:1px solid gray;border-radius: 3px;font-size:12px;color: gray;margin: 31px 0 8px 0;}
+		.logo_03{width:141px;height:62px;background:url(任务所需小图/img/logo_03.jpg) no-repeat;margin:17px 108px 0 0;}
+		.search{width:497px;height:34px;margin:31px 0 8px 0;color:gray;border:3px solid #fe6c00;border-top-left-radius:3px;border-bottom-left-radius: 3px;}
+		.scbut{width:80px;height:40px;margin:31px 90px 8px 0;background-color: #fe6c00;border: 1px solid #fe6c00;border-top-right-radius:3px;border-bottom-right-radius: 3px;color:white;}
+		.telea{width:22px;height:13px;background:url(任务所需小图/img/common_min.png) 0 -98px no-repeat; margin: 5px 31px;}
+		.teleb{width:22px;height:13px;background:url(任务所需小图/img/common_min.png) 0 -115px no-repeat; margin: 5px 31px;}
+		.telec{width:54px;height:16px;background:url(任务所需小图/img/common_min.png) 0 -131px no-repeat;padding-left: 20px;margin:11px 6px; }
+		.teleq{width:84px;height:38px;border:1px solid gray;border-radius: 3px;font-size:12px;color: gray;background-color: #fe6c00;margin: 31px 0 8px 0;}
+		.twofont{margin: 0 1px;}
+
+		/*coverthree*/
+		#incoverthree{width: 1180px;height:24px;margin:0 auto;}
+		#incoverthree *{float: left;text-decoration:none;}
+		.ictul{margin:4px 361px 4px 256px;font-size:12px;color:#ebe7e7;list-style: none;}
+		.upright{margin:0 7px;}
+		.reda{color: red;}
+		.purplea{color: #aca9d3;}
+		.ictula{color: black}
+/*middle*/
+		#middle{width:100%;height:589px;}
+		#middleup{width:100%;;height:40px;border-bottom:1px solid red;}
+		#middledown{width:100%;height:548px;background-color: #f8f7f6;}
+
+		/*middleup*/
+		#middleup ul{width:1180px;height:40px;margin:0 auto;}
+		#middleup li{text-align:center;line-height: 40px;float:left;}
+		.mduli1{width:168px;height:40px;background-color: #ff4d04;color:white;}
+		.mduli2{width:96px;height:40px;padding-left:17px;}
+		.mduli3{width:102px;height:40px;}
+		.mduli4{width:104px;height:40px;}
+		.mduli5{width:118px;height:40px;}
+		.mduli6{width:103px;height:40px;}
+		.mduli7{width:102px;height:40px;}
+		.mduli8{width:115px;height:40px;padding-right: 255px;background:url(任务所需小图/img/hot.gif) no-repeat 85px -3px;}
+
+		/*middledown*/
+		#midbig{width:1180px;height:548px;margin:0 auto;}
+		#mdd1{float:left;width:169px;height:548px;}
+		#mdd2{float:left;width:800px;height:548px;}
+		#mdd3{float:left;width:211px;height:548px;background-color: white;}
+
+		/*mdd1*/
+		#mdd1up{width:169px;height:422px;text-align:center;border-bottom:1px solid #fe6c00;box-sizing: border-box;background-color: white;}
+		#mdd1down{width:169px;height:126px;background-color: white;}
+		#mdd1down a{float:left;width:129px;height:42px;text-decoration: none;color:#855d38;line-height: 42px;padding-left: 40px;font-size:14px;}
+		.dd_03{background:url(任务所需小图/img/dd_03.jpg) no-repeat 8px 10px;}
+		.dd_06{background:url(任务所需小图/img/dd_06.jpg) no-repeat 8px 10px;}
+		.dd_08{background:url(任务所需小图/img/dd_08.jpg) no-repeat 8px 10px;}
+
+		.mdd1l{float:left;width:25px;height:422px;background-color: #4c4c4a;color:#ff4d04;}
+		.mdd1r{float:left;width:144px;height:422px;font-size:14px;}
+
+		.shanghe{float:left;width:36px;height:38px;line-height: 38px;}
+		.xiahe{float:left;width:36px;height:32px;line-height: 32px;}
+
+		/*mdd2*/
+		#mdd2up{float:left;width:800px;height:362px;}
+		#mdd2down{float:left;width:800px;height:186px;border-top:3px solid #ff4d04;}
+		#mdd2down img{float:left;}
+
+		/*mdd2up*/
+		ul,li{list-style: none;}
+		a{text-decoration: none;}
+		.box{width: 800px;height: 362px;border: 1px solid red;/*margin: 100px auto;*/position: relative;overflow: hidden;float: left;box-sizing: border-box;}
+		.slider{width: 6480px;position: absolute;left: -810px;float: left;}
+		.slide{width: 810px;overflow: hidden;float: left;}
+		.box>span{display: block;width: 30px;height: 50px;text-align: center;cursor: pointer;color: #fff;top: 175px;line-height: 50px;background: rgb(255,0,0);font-size: 30px;position: absolute;/* display: none; */opacity: 0;}
+		#left{left: 30px;}
+		#right{right: 30px;}
+
+		.nav{position: absolute;left: 330px;bottom: 20px;}
+		.nav>li{float: left;width: 20px;height: 20px;background: #ccc;cursor: pointer;margin: 0 10px;border-radius: 50%;text-align:center;line-height: 20px;}
+		.nav .active{background: red;}   
+
+
+
+		/*mdd3*/
+		#mdd3up{float:left;width:211px;height:362px;font-size:14px;font-weight: bolder;}
+		.bangbang{width:211px;height:45px;border-bottom:1px solid #ebeae7;box-sizing:border-box;background:url(任务所需小图/img/ico-notice.png) no-repeat 22px 15px,url(任务所需小图/img/jiantou.jpg) no-repeat 182px 17px;line-height: 45px;padding-left: 50px;}
+		.bangbang a{text-decoration: none;color:#ff4d04;}
+
+		/*gonggao*/
+		#gonggao{float:left;width:211px;height:317px;overflow: hidden;}
+		#gonggaoup{float:left;width:211px;height:377px;}
+		#gonggaodown{float:left;width:211px;}
+		#gonggao li{font-size:13px;color:#ff4d04;width:201px;height:29px;line-height: 29px;padding-left: 10px;}
+
+
+		#mdd3down{float:left;width:211px;height:186px;border-top:1px solid #ebeae7;box-sizing:border-box;}
+		#mdd3down *{float:left;}
+		.mdd3p1{width:64px;height:33px;font-size:14px;background:url(任务所需小图/img/phone.png) no-repeat 10px 6px;line-height: 33px;padding-left: 30px;}
+		.mdd3p2{width:117px;height:33px;font-size:12px;line-height: 33px;color:#ff4d04;}
+		.phonenumber{width:122px;height:22px;color:gray;margin-left:10px;margin-right: 75px;}
+		.xiala{width:59px;height:16px;margin:6px 1px 6px 10px;}
+		.mdd3p3{width:131px;height:16px;color:#ff4d04;font-size:14px;margin:6px 0;padding-left: 10px;}
+		.chongzhi{width:177px;height:25px;color:white;background-color: #ff4d04;border-radius:3px;border: 1px solid transparent;margin:0 24px 74px 10px;}
+
+/*bottom*/
+		#bottom{width:100%;height:345px;background-color:#f8f7f6;}
+		#botton *{float: left;}
+		#bottomup{width: 1180px;height: 181px;border-bottom:1px solid gray;margin: 0 auto;}
+		#bottomdown{width: 1180px;height:163px;margin: 0 auto;}
+		/*bottomup*/
+		#bottomuplist{width: 843px;height: 181px;float: left;}
+		#bottomuplist ul{font-size:12px;color:gray;line-height: 24px;}
+
+		.loginB{margin-right: 21px;float: left;}
+		.bigfont{font-size:16px;color:black;}
+
+		.box1{width: 131px;height:150px;margin-left: 64px;padding-top: 31px;float: left;}
+		.box2{width:131px;height: 150px;padding-top: 31px;float: left;}
+		.box3{width: 131px;height: 150px;padding-top: 31px;float: left;}
+		.box4{width: 134px;height:150px;padding-top: 31px;float: left;}
+		.box5{width: 127px;height:150px;padding-top: 31px;float: left;}
+		.box6{width:123px;height:150px;padding-top: 31px;float: left;}
+
+		.erweima{width:117px;height:144px;padding:27px 50px 10px 0;}
+		/*bottondown*/
+		.btdul{width:554px;height:16px;padding: 16px 313px 0 313px;padding-top:16px;}
+		.btdul *{font-size:12px;color:gray;list-style: none;text-decoration: none;float:left;}
+		#bottomdown p{width:1180px;height:24px;font-size:12px;color:gray;float:left;text-align:center;float:left;}
+		.imgdiv{width:1180px;height:58px;float:left;text-align:center;}
+
+/*侧边栏*/
+		/*first*/
+	  	.first{height: 105px;width: 43px;position: fixed;z-index: 1;top: 	110px;right:0;overflow-x: hidden;overflow-y: hidden;transition: 0.5s;}
+		.consult-s{height: 60px;}
+		.xiaobang{height: 45px;}
+	
+	
+		/*second*/
+		.second{height: 140px;width: 123px;position: fixed;z-index: 1;top	: 219px;right:-80px;overflow-x: hidden;overflow-y: hidden;transition: 0.5s;}
+		.youhui{height: 140px;width: 60px;float: left;background: red;}
+		.wenzi{height: 140px;width: 63px;float: left;text-align: center;background: #fd9a6e;padding-top: 30px;}
+		.wenzi1{font-size:12px;margin-top: 18px;}
+		.wenzi2{color: white;width: 30px;font-size:12px;border: 1px white solid;text-align: center;margin-left: 15px;margin-top: 15px;}
+	
+		/*third*/
+		.third{height: 150px;width: 43px;position: fixed;z-index: 1;top: 363px;right:0 ;overflow-x: hidden;overflow-y: hidden;transition: 0.5s;}
+		.app{width: 123px;height:50px;}
+		#liaerwei{background:#fd9a6e;width: 123px;height: 100px;position:absolute;}
+		#serwei{display: block; width: 24px;height: 24px;margin-left: 11px;margin-top: 50px; }
+		#erwei{margin-left: 15px;margin-top: 5px;display:none;}
+
+		/*fourth*/
+		.fourth{height: 140px;width: 43px;position: fixed;z-index: 1;top: 517px;right:0;overflow-x: hidden;overflow-y: hidden;transition: 0.5s;}
+
+	</style>
+</head>
+<body>
+	<div id='cover'>
+		<div id='coverone'>
+			<div id='incoverone'>
+				<a href='#' class='topa'>帮5买，享帮帮</a>
+				<a class='top_QQ'></a>
+				<a class='top_WX'></a>
+				<a class='top_XL'></a>
+				<a href="#" class='topb'>登陆</a>
+				<a href="#" class='topb'>注册</a>
+				<a href="#" class='top_XX'>消息</a>
+				<a href="#" class='top_DD'>我的订单</a>
+				<a href="#" class='topc'>我的收藏</a>
+				<a href="#" class='topc'>帮钻兑换</a>
+				<a href="#" class='top_SJ'>手机版</a>
+				<a href="#" class='topd'>帮5淘</a>
+				<a href="#" class='topc'>客户服务</a>
+				<a href="#" class='top_GW'>购物车</a>
+				<a href="#" class='tope'>0</a>
+			</div>
+		</div>
+		<div id='covertwo'>
+			<div id='incovertwo'>
+				<a href="#" class='logo_03'></a>
+				<input class='search' type="text" name="search" value="输入商品网址或关键词，直通全网，快速帮5购！">
+				<button class='scbut'>搜全网</button>
+				<div class='tele'>
+					<a class='telea'></a>
+					<a class='twofont'>400-085-0505</a>
+				</div>
+				<div class='tele'>
+					<a class='teleb'></a>
+					<a class='twofont'>mc@b5m.com</a>
+				</div>
+				<div class='teleq'>
+					<a class='telec'>常见问题</a>
+				</div>
+			</div>
+		</div>
+		<div id='coverthree'>
+			<div id="incoverthree">
+				<ul class="ictul">
+					<li><a class="reda" href="#">洗发护发</a></li><li class="upright">|</li>
+					<li><a class="reda" href="#">日本纸尿裤</a></li><li class="upright">|</li>
+					<li><a class="ictula" href="#">身体乳</a></li><li class="upright">|</li>
+					<li><a class="ictula" href="#">内衣文胸</a></li><li class="upright">|</li>
+					<li><a class="purplea" href="#">iPhone 6s</a></li><li class="upright">|</li>
+					<li><a class="purplea" href="#">iPad Air2</a></li><li class="upright">|</li>
+					<li><a class="ictula" href="#">牛仔裤</a></li><li class="upright">|</li>
+					<li><a class="ictula" href="#">奶粉</a></li><li class="upright">|</li>
+					<li><a class="ictula" href="#">防晒霜</a></li><li class="upright">|</li>
+					<li><a class="ictula" href="#">伞</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id='middle'>
+		<div id="middleup">
+			<ul>
+				<li class="mduli1">全部商品分类</li>
+				<li class="mduli2">帮5赚</li>
+				<li class="mduli3">帮韩品</li>
+				<li class="mduli4">超划算</li>
+				<li class="mduli5">品牌货栈</li>
+				<li class="mduli6">韩国馆</li>
+				<li class="mduli7">帮社区</li>
+				<li class="mduli8">1元兑奖</li>
+				
+			</ul>
+		</div>
+		<div id="middledown">
+			<div id="midbig">
+				<div id="mdd1">
+					<div id="mdd1up">
+						<div class="mdd1l">当前搜索电商全网</div>
+						<div class="mdd1r">
+							<div class="shanghe">手机</div><div class="shanghe">数码</div><div class="shanghe">影音</div><div class="shanghe">配件</div>
+							
+							<div class="xiahe">电脑</div><div class="xiahe">网络</div><div class="xiahe">办公</div><div class="xiahe">打印</div><div class="xiahe">家电</div><div class="xiahe">厨卫</div><div class="xiahe">生活</div><div class="xiahe">个户</div><div class="xiahe">园艺</div><div class="xiahe">家具</div><div class="xiahe">家纺</div><div class="xiahe">家饰</div><div class="xiahe">彩妆</div><div class="xiahe">面部</div><div class="xiahe">身体</div><div class="xiahe">香水</div><div class="xiahe">男装</div><div class="xiahe">女装</div><div class="xiahe">内衣</div><div class="xiahe">其他</div><div class="xiahe">女包</div><div class="xiahe">男包</div><div class="xiahe">女鞋</div><div class="xiahe">男鞋</div><div class="xiahe">运动</div><div class="xiahe">户外</div><div class="xiahe">装备</div><div class="xiahe">服饰</div><div class="xiahe">儿童</div><div class="xiahe">婴儿</div><div class="xiahe">食品</div><div class="xiahe">玩具</div><div class="xiahe">乐器</div><div class="xiahe">家宠</div><div class="xiahe">收藏</div><div class="xiahe">鲜花</div><div class="xiahe">保健</div><div class="xiahe">理疗</div><div class="xiahe">药品</div><div class="xiahe">眼镜</div><div class="xiahe">果蔬</div><div class="xiahe">礼品</div><div class="xiahe">粮油</div><div class="xiahe">特产</div><div class="xiahe">文艺</div><div class="xiahe">生活</div><div class="xiahe">科技</div><div class="xiahe">教育</div>
+						</div>
+					</div>
+					<div id="mdd1down">
+						<a class="dd_03" href="#">什么是帮5购</a>
+						<a class="dd_06" href="#">帮5购提供什么服务</a>
+						<a class="dd_08" href="#">如何开通帮5购服务</a>
+					</div>
+				</div>
+				<div id="mdd2">
+					<div id="mdd2up">
+
+						<div class="box" id="box">
+							<div class="slider" id="slider">
+								<div class="slide"><img src="任务所需小图/img/bann6.png" alt=""></div>
+								<div class="slide"><img src="任务所需小图/img/bann1.jpeg" alt=""></div>
+								<div class="slide"><img src="任务所需小图/img/bann2.jpeg" alt=""></div>
+								<div class="slide"><img src="任务所需小图/img/bann3.jpeg" alt=""></div>
+								<div class="slide"><img src="任务所需小图/img/bann4.jpeg" alt=""></div>
+								<div class="slide"><img src="任务所需小图/img/bann5.jpeg" alt=""></div>
+								<div class="slide"><img src="任务所需小图/img/bann6.png" alt=""></div>
+								<div class="slide"><img src="任务所需小图/img/bann1.jpeg" alt=""></div>
+							</div>
+							<span id="left"><</span>
+							<span id="right">></span>
+							<ul class="nav" id="nav">
+								<li class="active">1</li>
+								<li>2</li>
+								<li>3</li>
+								<li>4</li>
+								<li>5</li>
+								<li>6</li>
+							</ul>
+						</div>
+
+					</div>
+					<div id="mdd2down">
+						<img src="任务所需小图/img/1(1).jpg">
+						<img src="任务所需小图/img/2.jpg">
+						<img src="任务所需小图/img/3(1).png">
+						<a href="详情页.html"><img src="任务所需小图/img/qqq.png"></a>
+					</div>
+				</div>
+				<div id="mdd3">
+					<div id="mdd3up">
+						<div class="bangbang"><a href="#">帮帮快讯</a></div>
+						<div id="gonggao">
+							<ul id="gonggaoup" >
+					        	<li>[公告] 帮购及VIP服务调整1</li>
+                            	<li>[公告] 帮购及VIP服务调整2</li>
+                           		<li>[公告] 帮购及VIP服务调整3</li>
+                            	<li>[公告] 帮购及VIP服务调整4</li>
+                            	<li>[公告] 帮购及VIP服务调整5</li>
+                        	    <li>[公告] 帮购及VIP服务调整6</li>
+                            	<li>[公告] 帮购及VIP服务调整7</li>
+                            	<li>[公告] 帮购及VIP服务调整8</li>
+                            	<li>[公告] 帮购及VIP服务调整9</li>
+                            	<li>[公告] 帮购及VIP服务调整10</li>
+                            	<li>[公告] 帮购及VIP服务调整11</li>
+                            	<li>[公告] 帮购及VIP服务调整12</li>
+                            	<li>[公告] 帮购及VIP服务调整13</li>
+                        	</ul>
+                        	<ul id="gonggaodown"></ul>
+						</div>
+					</div>
+					<div id="mdd3down">
+						<p class="mdd3p1">话费充值</p><p class="mdd3p2">（可使用超级帮钻）</p>
+						<input class="phonenumber" type="input" name="phonenumber" value="请输入手机号">
+						<select class="xiala" >
+							<option value="¥ 10">10</option>
+							<option value="¥ 20">20</option>
+							<option value="¥ 30" selected="selected">30</option>
+							<option value="¥ 50">50</option>
+							<option value="¥ 100">100</option>
+						</select>
+						<p class="mdd3p3">¥ 30</p>
+						<button class="chongzhi">充值</button>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div id='bottom'>
+		<div id="bottomup">
+			<img class="loginB" src="任务所需小图/img/loginB.jpg">
+			<div id="bottomuplist">
+				<div class="box1">
+					<ul><li class="bigfont">购物指南</li><li>如何下单</li><li>帮5购流程</li><li>订单查询</li><li>物流配送</li></ul>
+				</div>
+				<div class="box2">
+					<ul><li class="bigfont">支付相关</li><li>支付方式</li><li>安全设置</li><li>账户信息</li></ul>
+				</div>
+				<div class="box3">
+					<ul><li class="bigfont">售后服务</li><li>取消订单</li><li>申请售后</li><li>退货流程</li><li>退款相关</li></ul>
+				</div>
+				<div class="box4">
+					<ul><li class="bigfont">VIP服务</li><li>VIP优惠</li><li>如何成为VIP</li><li>超级帮钻</li></ul>
+				</div>
+				<div class="box5">
+					<ul><li class="bigfont">帮韩品</li><li>韩国正品</li><li>闪电发货</li><li>帮韩品售后</li></ul>
+				</div>
+				<div class="box6">
+					<ul><li class="bigfont">更多</li><li>手机APP</li><li>帮5采APP</li><li>帮5淘APP</li><li>其他</li></ul>
+				</div>
+			</div>
+			<img class="erweima" src="任务所需小图/img/erweima.jpg">
+		</div>
+		<div id="bottomdown">
+			<ul class="btdul">
+				<li><a href="#">关于帮5买</a></li><li class="upright">|</li>
+				<li><a href="#">联系我们</a></li><li class="upright">|</li>
+				<li><a href="#">合作商家</a></li><li class="upright">|</li>
+				<li><a href="#">友情链接</a></li><li class="upright">|</li>
+				<li><a href="#">加入我们</a></li><li class="upright">|</li>
+				<li><a href="#">移动应用</a></li><li class="upright">|</li>
+				<li><a href="#">热门</a></li><li class="upright">|</li>
+				<li><a href="#">广告联盟</a></li><li class="upright">|</li>
+				<li><a href="#">使用条款</a></li>
+			</ul>
+
+			<p>Copyright © 2011-2015 B5M.COM. All rights reserved. Powered by B5Msoft Co.,Ltd.</p>
+			<p>增值电信业务经营许可证：沪B2-20130065号 | 中华人民共和国互联网药品信息服务资格证书（沪） -非经营性——2013-0034 沪卫（中医）网审【2015】 10032号 沪ICP备11034776号-3 | 食品流通许可证：</p>
+			<p>SP3101151410301755</p>
+			<div class="imgdiv">
+				<img src="任务所需小图/img/bo1.gif">
+				<img src="任务所需小图/img/bo2.png">
+				<img src="任务所需小图/img/bo3.gif">
+				<img src="任务所需小图/img/bo4.png">
+				<img src="任务所需小图/img/bo5.png">
+				<img src="任务所需小图/img/bo6.png">
+				<img src="任务所需小图/img/bo7.png">
+			</div>
+		</div>
+	</div>
+	<!-- 侧边栏 -->
+	<div>
+		<div id="zixun" class="first" onmouseover="outfirst()" onmouseout="infirst()">
+			<div class="consult-s"><img src="任务所需小图\img\consult-s.png" ></div>
+			<div class="xiaobang"><img src="任务所需小图\img\xiaobang.png" ></div>
+		</div>
+
+		<div id="youhuiquan" class="second" onmouseover="outsecond()" onmouseout="insecond()">
+			<div class="youhui" >
+ 				<img src="任务所需小图\img\youhui.png">
+			</div>
+			<div class="wenzi">
+   				<div class="wenzi1">未登录</div>
+  		 		<div class="wenzi2">登录</div>
+   			</div>
+		</div>
+
+		<div id="shouji" class="third" onmouseover="outthird()" onmouseout="inthird()">
+  			<div class="app">
+   				<img src="任务所需小图\img\app.png">
+  			</div>
+  			<div id="liaerwei">
+    			<div id="serwei"><img src="任务所需小图\img\serwei.png"></div>
+     			<div id="erwei"><img src="任务所需小图\img\erwei.png"></div>
+  			</div>
+		</div>
+
+		<div id="gouwuche" class="fourth" onmouseover="outfourth()" onmouseout="infourth()">
+			<img src="任务所需小图\img\cart.png">
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		// 顶部悬浮
+		window.onload = function(){
+			var cover = document.getElementById('cover');
+			
+			window.onscroll = function(){
+				var st = document.documentElement.scrollTop || document.body.scrollTop;
+				if(st>129){
+					cover.style.position = 'fixed';
+				}else{
+					cover.style.position = 'static';
+				}
+			}
+		}
+
+
+
+		//充值金额显示
+		var xiala = document.getElementsByClassName('xiala')[0];
+		xiala.onmouseout = function(){
+			
+			var xialaselected = xiala.options[xiala.selectedIndex].value;
+			
+			var mdd3p3 = document.getElementsByClassName('mdd3p3')[0].innerHTML;
+			document.getElementsByClassName('mdd3p3')[0].innerHTML = xialaselected;
+		}
+		
+
+		//轮播图
+				var slider=document.getElementById('slider');
+		var box=document.getElementById('box');
+		var left=document.getElementById('left');
+		var right=document.getElementById('right')
+		var oNavlist=document.getElementById('nav').children;
+		var index=1;
+		function next(){
+			
+			index++;
+			navChange();
+			animate(slider,{left:-810*index},function(){
+				if (index==7) {
+					slider.style.left='-810px';
+					index=1;
+				}
+
+			})
+			
+		}
+		function prev(){
+
+			index--;
+			navChange()
+			animate(slider,{left:-810*index},function(){
+				if (index==0) {
+					slider.style.left='-4860px';
+					index=6;
+				}
+
+			})
+		}
+		
+		var timer= setInterval(next,1000)
+		//鼠标划上时，停止轮播，左右箭头淡出
+
+		box.onmouseover=function(){
+			clearInterval(timer);
+			animate(left,{opacity:50});
+			animate(right,{opacity:50});
+		}
+		//鼠标划出，继续轮播，左右箭头淡出
+		box.onmouseout=function(){
+			animate(left,{opacity:0});
+			animate(right,{opacity:0});
+			timer=setInterval(next,1000);
+		}
+		//点击左右箭头
+		right.onclick=next;
+		left.onclick=prev;
+		//点击小按钮，让slider找到指定的位置
+		for (var i = 0; i < oNavlist.length; i++) {
+			oNavlist[i].idx=i;
+			oNavlist[i].onclick=function(){
+				index=this.idx+1;
+				animate(slider,{left:-810*(index)})
+				navChange();
+			}
+		};
+		function navChange(){
+			for (var i = 0; i < oNavlist.length; i++) {
+				oNavlist[i].className='';
+			};
+			if(index==7){
+				oNavlist[0].className='active';
+			}
+			else if(index==0){
+				oNavlist[5].className='active';
+			}
+			else{
+				oNavlist[index-1].className='active';
+			}
+			
+		}
+		
+		function animate(obj,json,callback){		
+			clearInterval(obj.timer);
+			obj.timer = setInterval(
+				function(){	
+					var isStop = true;
+					for (var attr in json){
+						if(attr=='opacity'){
+							var now = parseInt(getStyle(obj,attr)*100);
+						}else{
+						var now = parseInt(getStyle(obj,attr));
+						}
+				
+						var speed = (json[attr]-now)/5;
+						speed = speed>0?Math.ceil(speed):Math.floor(speed);
+						if (attr=='opacity') {
+							obj.style[attr]=(now+speed)/100;
+						}else{
+							obj.style[attr]=now+speed+'px';
+						}
+				
+						var current = now+speed;
+						if(json[attr]!==current){
+							isStop = false;
+						}
+					}					
+					if(isStop){
+						clearInterval(obj.timer)
+						callback&&callback();
+					}
+	 		},10)
+		}
+
+
+		function getStyle(obj,style){
+			if(getComputedStyle(obj)){
+				return getComputedStyle(obj)[style];
+			}else{
+				obj.currentStyle[style];
+			}		
+		}	
+
+		//公告滚动
+		var area =document.getElementById('gonggao');
+        var con1 = document.getElementById('gonggaoup');
+        var con2 = document.getElementById('gonggaodown');
+        con2.innerHTML = con1.innerHTML;
+        function scrollUp(){
+            if(area.scrollTop>=con1.offsetHeight){
+                area.scrollTop=0;
+            }else{   
+                area.scrollTop++;
+            }
+        }                
+        var time = 50;
+        var mytimer=setInterval(scrollUp,time);
+        area.onmouseover=function(){
+            clearInterval(mytimer);
+        }
+        area.onmouseout=function(){
+            mytimer=setInterval(scrollUp,time);
+        }
+
+		//侧边栏
+		function outfirst() {
+		    document.getElementById("zixun").style.width = "123px";
+		}
+
+		function infirst() {
+		    document.getElementById("zixun").style.width = "43px";
+		}
+
+		function outsecond() {
+    		document.getElementById("youhuiquan").style.right="0";
+		}
+
+		function insecond() {
+   			document.getElementById("youhuiquan").style.right= "-80px";
+		}
+		function outthird() {
+    		document.getElementById("shouji").style.width = "123px";
+    		document.getElementById("serwei").style.display="none";
+    		document.getElementById("erwei").style.display="block";
+		}
+
+		function inthird() {
+    		document.getElementById("shouji").style.width = "43px";
+    		document.getElementById("serwei").style.display="block";
+    		document.getElementById("erwei").style.display="none";
+		}
+		function outfourth() {
+    		document.getElementById("gouwuche").style.width = "123px";
+		}
+
+		function infourth() {
+    		document.getElementById("gouwuche").style.width = "43px";
+		}
+
+	</script>
+</body>
+</html>
